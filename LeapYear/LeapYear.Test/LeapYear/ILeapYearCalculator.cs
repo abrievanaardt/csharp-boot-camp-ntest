@@ -2,7 +2,8 @@
 
 namespace LeapYear
 {
-    interface ILeapYearCalculator
+    public interface ILeapYearCalculator
     {
+        bool isLeapYear(long year);
     }
 }
