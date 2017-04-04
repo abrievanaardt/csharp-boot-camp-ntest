@@ -46,6 +46,12 @@ namespace Fizzbuzz.Test
             Assert.That(expectedResult, Is.EqualTo(_fizzbuzzer.PrintFizzbuzzSequence()));
         }
 
+        [Test]
+        public void PrintFizzbuzzNonNaturalTest()
+        {
+            Assert.Throws<ArgumentException>(()=> _fizzbuzzer.PrintFizzbuzzSequence(0));
+        }
+
     }
 
 }

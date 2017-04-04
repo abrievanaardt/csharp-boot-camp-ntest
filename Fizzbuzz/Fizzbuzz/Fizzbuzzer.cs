@@ -8,7 +8,7 @@ namespace Fizzbuzz
 {
     public class Fizzbuzzer : IFizzbuzzer
     {
-        public string getFizzbuzz(int number)
+        public string GetFizzbuzz(int number)
         {
             if (number % 3 == 0 && number % 5 == 0)
                 return "FizzBuzz";
@@ -22,13 +22,19 @@ namespace Fizzbuzz
 
         public string PrintFizzbuzzSequence(int number)
         {
+            if (number < 1)
+                throw new ArgumentException();
+
             string result = "";
             for(int i = 1; i <= number; i++)
             {
-                result += getFizzbuzz(i) + " ";
+                result += GetFizzbuzz(i) + " ";
             }
 
+            result = result.Remove(result.Length - 1);
+
             Console.WriteLine(result);
+
             return result;
         }
     }
