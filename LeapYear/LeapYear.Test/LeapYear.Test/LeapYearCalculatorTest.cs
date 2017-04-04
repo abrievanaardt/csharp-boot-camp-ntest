@@ -14,12 +14,22 @@ namespace LeapYear.Test
         }
         
 
-       [Theory,
-        InlineData(1900, false),
-        InlineData(1910, false),
-        InlineData(2000, true),
-        InlineData(2001, false)]
-        public void InlineDataExample(long year, bool expectedResult)
+        [Theory]
+        [InlineData(1900, false)]
+        [InlineData(1910, false)]
+        [InlineData(2000, true)]
+        [InlineData(2001, false)]
+        public void LeapYearPositiveTest(long year, bool expectedResult)
+        {
+            Assert.Equal(expectedResult, _leapYearCalculator.IsLeapYear(year));
+        }
+
+        [Theory]
+        [InlineData(1900, false)]
+        [InlineData(1910, false)]
+        [InlineData(2000, true)]
+        [InlineData(2001, false)]
+        public void LeapYearNegativeTest(long year, bool expectedResult)
         {
             Assert.Equal(expectedResult, _leapYearCalculator.IsLeapYear(year));
         }
