@@ -4,6 +4,6 @@ namespace LeapYear
 {
     public interface ILeapYearCalculator
     {
-        bool isLeapYear(long year);
+        bool IsLeapYear(long year);
     }
 }

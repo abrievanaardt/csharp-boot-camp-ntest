@@ -21,7 +21,7 @@ namespace LeapYear.Test
         InlineData(2001, false)]
         public void InlineDataExample(long year, bool expectedResult)
         {
-            Assert.Equal(expectedResult, _leapYearCalculator.isLeapYear(year));
+            Assert.Equal(expectedResult, _leapYearCalculator.IsLeapYear(year));
         }
     }
 }
