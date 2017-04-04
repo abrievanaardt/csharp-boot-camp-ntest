@@ -8,14 +8,28 @@ namespace Fizzbuzz
 {
     public class Fizzbuzzer : IFizzbuzzer
     {
-        string IFizzbuzzer.getFizzbuzz(int number)
+        public string getFizzbuzz(int number)
         {
-            throw new NotImplementedException();
+            if (number % 3 == 0 && number % 5 == 0)
+                return "FizzBuzz";
+            if (number % 3 == 0)
+                return "Fizz";
+            if (number % 5 == 0)
+                return "Buzz";
+
+            return number.ToString();
         }
 
-        string IFizzbuzzer.PrintFizzbuzzSequence(int number)
+        public string PrintFizzbuzzSequence(int number)
         {
-            throw new NotImplementedException();
+            string result = "";
+            for(int i = 1; i <= number; i++)
+            {
+                result += getFizzbuzz(i) + " ";
+            }
+
+            Console.WriteLine(result);
+            return result;
         }
     }
 }
