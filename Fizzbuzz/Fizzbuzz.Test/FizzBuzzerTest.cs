@@ -1,10 +1,12 @@
 ﻿using System;
-using NUnit;
+using NUnit.Framework;
 
 namespace Fizzbuzz.Test
 {
     public class FizzbuzzerTest
     {
+        IFizzbuzzer _fizzbuzzer;
+
 
     }
 }
