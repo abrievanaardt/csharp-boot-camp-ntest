@@ -2,7 +2,7 @@
 {
     public interface IFizzbuzzer
     {
-        string getFizzbuzz(int number);
+        string GetFizzbuzz(int number);
         string PrintFizzbuzzSequence(int number = 100);
     }
 }
